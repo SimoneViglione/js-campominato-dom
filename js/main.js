@@ -44,6 +44,11 @@ bottoneGriglia.addEventListener("click", () => {
       quadratiGriglia.addEventListener("click", (event) => {
         event.target.classList.add("bomba");
         alert("BOOM! Hai perso! Punteggio: " + punteggio); 
+
+        for (let i = 0; i < numeriBomba.length; i++) {
+          const bomba = document.querySelector(`.quadrato:nth-child(${numeriBomba[i]})`);
+          bomba.classList.add("bomba");
+        }        
       });
       
     } else {
